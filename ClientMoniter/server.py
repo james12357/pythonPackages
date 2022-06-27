@@ -23,12 +23,7 @@ def b():
         bs = io.BytesIO(co)
         i = Image.open(bs)
         i = ImageTk.PhotoImage(i)
-        t()
-
-
-def t():
-    root.after(100, t)
-    cv.create_image(0, 0, image=i)
+        cv.create_image(0, 0, image=i)
 
 
 _thread.start_new_thread(b, ())

